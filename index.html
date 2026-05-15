@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BC-Shanghai offers premium serviced offices, traditional office leasing, and coworking spaces in prime locations across Shanghai. Flexible terms, all-inclusive pricing, and professional support.">
+    <meta name="keywords" content="Shanghai office, serviced office Shanghai, coworking Shanghai, office lease Shanghai, BC-Shanghai, premium office space">
+    <meta name="author" content="BC-Shanghai">
+    <meta property="og:title" content="Premium Office Space in Shanghai | BC-Shanghai">
+    <meta property="og:description" content="Flexible, fully-equipped serviced offices and premium commercial real estate in the heart of Shanghai.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bcshanghai.com">
+    <meta property="og:image" content="https://www.bcshanghai.com/images/外滩1.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Premium Office Space in Shanghai | BC-Shanghai">
+    <meta name="twitter:description" content="Your gateway to flexible, fully-equipped serviced offices in Shanghai.">
+    <meta name="twitter:image" content="https://www.bcshanghai.com/images/外滩1.webp">
+    <title>Premium Office Space in Shanghai | BC-Shanghai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2b6cb0',
+                        accent: '#f6ad55',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .text-shadow-lg {
+                text-shadow: 0 4px 8px rgba(0,0,0,0.25);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="https://www.bcshanghai.com" target="_blank" class="text-primary font-bold text-xl">BC Shanghai</a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="nav-link hover:text-secondary transition-colors" data-i18n="services">Services</a>
+                <a href="#offices" class="nav-link hover:text-secondary transition-colors" data-i18n="officeTypes">Office Types</a>
+                <a href="#advantages" class="nav-link hover:text-secondary transition-colors" data-i18n="advantages">Advantages</a>
+                <a href="#contact" class="nav-link hover:text-secondary transition-colors" data-i18n="contact">Contact</a>
+                
+                <!-- Language Switcher -->
+                <div class="relative group pb-2">
+                    <button class="flex items-center space-x-1 px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+                        <span id="current-lang">EN</span>
+                        <i class="fa fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="absolute right-0 mt-0 w-36 bg-white rounded-md shadow-lg hidden group-hover:block z-50" style="top: 100%;">
+                        <button class="lang-option w-full text-left px-4 py-2 hover:bg-gray-100 rounded-t-md" data-lang="en">English</button>
+                        <button class="lang-option w-full text-left px-4 py-2 hover:bg-gray-100" data-lang="fr">Français</button>
+                        <button class="lang-option w-full text-left px-4 py-2 hover:bg-gray-100" data-lang="de">Deutsch</button>
+                        <button class="lang-option w-full text-left px-4 py-2 hover:bg-gray-100" data-lang="es">Español</button>
+                        <button class="lang-option w-full text-left px-4 py-2 hover:bg-gray-100" data-lang="pt">Português</button>
+                        <button class="lang-option w-full text-left px-4 py-2 hover:bg-gray-100" data-lang="ja">日本語</button>
+                        <button class="lang-option w-full text-left px-4 py-2 hover:bg-gray-100" data-lang="ko">한국어</button>
+                        <button class="lang-option w-full text-left px-4 py-2 hover:bg-gray-100 rounded-b-md" data-lang="zh">中文</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fa fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="#services" class="block py-2 hover:text-secondary transition-colors" data-i18n="services">Services</a>
+                <a href="#offices" class="block py-2 hover:text-secondary transition-colors" data-i18n="officeTypes">Office Types</a>
+                <a href="#advantages" class="block py-2 hover:text-secondary transition-colors" data-i18n="advantages">Advantages</a>
+                <a href="#contact" class="block py-2 hover:text-secondary transition-colors" data-i18n="contact">Contact</a>
+                
+                <!-- Mobile Language Switcher -->
+                <div class="pt-3 border-t">
+                    <p class="text-sm text-gray-500 mb-2" data-i18n="selectLanguage">Select Language</p>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button class="lang-option px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 text-sm" data-lang="en">English</button>
+                        <button class="lang-option px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 text-sm" data-lang="fr">Français</button>
+                        <button class="lang-option px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 text-sm" data-lang="de">Deutsch</button>
+                        <button class="lang-option px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 text-sm" data-lang="es">Español</button>
+                        <button class="lang-option px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 text-sm" data-lang="pt">Português</button>
+                        <button class="lang-option px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 text-sm" data-lang="ja">日本語</button>
+                        <button class="lang-option px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 text-sm" data-lang="ko">한국어</button>
+                        <button class="lang-option px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 text-sm" data-lang="zh">中文</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center bg-gradient-to-r from-primary/90 to-secondary/90">
+        <div class="absolute inset-0 w-full h-full overflow-hidden z-0">
+            <img src="images/外滩1.webp" alt="Shanghai Skyline" loading="lazy" width="1920" height="1080" class="w-full h-full object-cover opacity-30">
+        </div>
+        <div class="container mx-auto px-4 z-10 text-white">
+            <div class="max-w-3xl">
+                <h1 class="text-[clamp(2.5rem,6vw,4rem)] font-bold leading-tight text-shadow-lg mb-6" data-i18n="heroTitle">Premium Office Spaces in Shanghai</h1>
+                <p class="text-[clamp(1.1rem,3vw,1.5rem)] text-white/90 mb-8 text-shadow" data-i18n="heroSubtitle">Your gateway to flexible, fully-equipped serviced offices and premium commercial real estate in the heart of Shanghai.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="px-8 py-3 bg-accent hover:bg-accent/90 text-primary font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg" data-i18n="contactUs">Contact Us</a>
+                    <a href="#services" class="px-8 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg" data-i18n="learnMore">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#services" class="text-white/80 hover:text-white">
+                <i class="fa fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-primary mb-4" data-i18n="ourServices">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-i18n="servicesDesc">We provide comprehensive office solutions tailored to your business needs, whether you're a startup, SME, or multinational corporation.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Serviced Offices -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/1-e1542699091859.webp" alt="Serviced Offices" loading="lazy" width="800" height="600" class="w-full h-full object-cover transition-transform hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                <i class="fa fa-building text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary" data-i18n="servicedOffices">Serviced Offices</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="servicedDesc">Fully furnished, ready-to-use office spaces with all amenities included. Flexible terms from 1 month to long-term leases. Perfect for companies looking for a hassle-free office solution.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                                <span data-i18n="feature1">All-inclusive pricing (rent, utilities, cleaning, internet)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                                <span data-i18n="feature2">Professional reception and administrative support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                                <span data-i18n="feature3">Meeting rooms and conference facilities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                                <span data-i18n="feature4">Flexible terms with no long-term commitment</span>
+                            </li>
+                        </ul>
+                        <a href="https://www.bcshanghai.com" target="_blank" class="inline-flex items-center text-secondary font-semibold hover:text-secondary/80 transition-colors">
+                            <span data-i18n="visitSite">Visit Website</span>
+                            <i class="fa fa-external-link ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Traditional Office Leasing -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/CHB1287.webp" alt="Traditional Office Leasing" loading="lazy" width="800" height="600" class="w-full h-full object-cover transition-transform hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                <i class="fa fa-key text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary" data-i18n="traditionalLeasing">Traditional Office Leasing</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="traditionalDesc">Customizable office spaces for long-term occupancy. Ideal for established companies requiring larger, branded workspace solutions tailored to your specific requirements.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                                <span data-i18n="feature5">Wide selection of Grade A office buildings across Shanghai</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                                <span data-i18n="feature6">Customizable space planning and interior design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                                <span data-i18n="feature7">Competitive rates and favorable lease terms</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                                <span data-i18n="feature8">Expert advice from local real estate professionals</span>
+                            </li>
+                        </ul>
+                        <a href="https://www.officezy.com" target="_blank" class="inline-flex items-center text-secondary font-semibold hover:text-secondary/80 transition-colors">
+                            <span data-i18n="visitSite">Visit Website</span>
+                            <i class="fa fa-external-link ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Office Types Section -->
+    <section id="offices" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-primary mb-4" data-i18n="officeSpaceTypes">Office Space Types</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-i18n="officeTypesDesc">We offer a variety of office solutions to match different business needs and team sizes.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Private Offices -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/CHB1306.webp" alt="Private Offices" loading="lazy" width="800" height="400" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3" data-i18n="privateOffices">Private Offices</h3>
+                        <p class="text-gray-600" data-i18n="privateDesc">Secure, enclosed office spaces for teams of 1-50 people. Fully furnished and equipped with everything your team needs to be productive.</p>
+                    </div>
+                </div>
+                
+                <!-- Coworking Spaces -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/5-e1552368483178.webp" alt="Coworking Spaces" loading="lazy" width="800" height="400" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3" data-i18n="coworking">Coworking Spaces</h3>
+                        <p class="text-gray-600" data-i18n="coworkingDesc">Flexible workstations in shared environments. Perfect for freelancers, startups, and remote workers seeking a professional work environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-primary mb-4" data-i18n="whyChooseUs">Why Choose Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-i18n="advantagesDesc">With over 15 years of experience in Shanghai's commercial real estate market, we provide unmatched expertise and service to our clients.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
+                        <i class="fa fa-map-marker text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-2" data-i18n="primeLocations">Prime Locations</h3>
+                    <p class="text-gray-600" data-i18n="locationDesc">Properties in Shanghai's most prestigious business districts, easily accessible by public transportation.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
+                        <i class="fa fa-cny text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-2" data-i18n="transparentPricing">Transparent Pricing</h3>
+                    <p class="text-gray-600" data-i18n="pricingDesc">No hidden fees or unexpected costs. We provide clear, competitive pricing tailored to your budget.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
+                        <i class="fa fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-2" data-i18n="expertTeam">Expert Team</h3>
+                    <p class="text-gray-600" data-i18n="teamDesc">Multilingual team of local real estate experts with deep knowledge of Shanghai's market regulations and practices.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
+                        <i class="fa fa-clock-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-2" data-i18n="fastSetup">Fast Setup</h3>
+                    <p class="text-gray-600" data-i18n="setupDesc">Move-in ready spaces with minimal paperwork. Get your office operational in as little as 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold mb-6" data-i18n="getInTouch">Get In Touch</h2>
+                    <p class="text-white/90 text-lg mb-8" data-i18n="contactDesc">Our multilingual team is ready to assist you with all your office space requirements. Contact us today for a free consultation.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1" data-i18n="email">Email</h3>
+                                <a href="mailto:info@bcshanghai.com" class="text-white/90 hover:text-accent transition-colors">info@bcshanghai.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-globe text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1" data-i18n="websites">Websites</h3>
+                                <div class="space-y-1">
+                                    <a href="https://www.bcshanghai.com" target="_blank" class="block text-white/90 hover:text-accent transition-colors">www.bcshanghai.com (Serviced Offices)</a>
+                                    <a href="https://www.officezy.com" target="_blank" class="block text-white/90 hover:text-accent transition-colors">www.officezy.com (Traditional Leasing)</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-map-marker text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1" data-i18n="location">Location</h3>
+                                <p class="text-white/90">Shanghai, China</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="images/shcityview.png" alt="Shanghai City View" loading="lazy" width="800" height="600" class="rounded-xl shadow-2xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white/70 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2015-2026 BC-Shanghai. All rights reserved.</p>
+            <p class="mt-2 text-sm" data-i18n="footerDesc">Premium office solutions in Shanghai for international businesses.</p>
+        </div>
+    </footer>
+
+<!-- JavaScript -->
+<script src="app.js"></script>
+<script src="lang.js"></script>
+</body>
+</html>
